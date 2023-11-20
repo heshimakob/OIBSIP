@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&subset=greek');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'roboto';
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    font-size: 30px;
+    color: #031540;
+    text-decoration: none;
+    font-weight: 800;
+}
+.navbar a {
+    font-size: 19px;
+    color: #031540;
+    text-decoration: none;
+    transition: .4s;
+    font-weight: 500;
+    margin-left: 30px;
+}
+.navbar a:hover, .navbar a.active {
+    color:black;
+}
+.home{
+    height: 100vh;
+    background: rgb(94,102,92);
+    background: linear-gradient(-90deg, #031540 65%,#fff 35%) ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+.home-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 600px;
+    height: 600px;
+    background-color: #031540;
+    border-radius: 50%;
+    border: 25px solid #fff;
+    outline: 25px solid #031540;
+}
+.home-image img{
+    position: relative;
+    bottom: 22px;
+    max-width: 400px;
+    border-radius: 100px;
+}
+.home-container{
+    max-width: 600px;
+    color: #ffffff;
+    text-align: right;
+}
+.home-container h1{
+    font-size: 40px;
+    line-height: 1.3;
+}
+.home-container h2{
+    font-size: 30px;
+    color: #00abf0;
+    -webkit-text-stroke: .6px #fff;
+
+}
+.home-container h3{
+    font-size: 20px;
+    margin-top: 25 px;
+}
+.home-container p{
+    font-size: 16px;
+    margin-top: 20px;
+}
+.home-network{
+    margin: 20px 0 40px;
+}
+.home-network a{
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: 1px solid #00abf0;
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+.btn{
+    padding: 15px 35px;
+    background: #00abf0;
+    border-radius: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.about{
+    height: 100vh;
+    background: #EEF5FF;
+  display: flex;
+  justify-content: space-between;
+
+    
+}
