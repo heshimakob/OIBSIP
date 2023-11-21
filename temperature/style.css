@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    font-size: 30px;
+    color: #031540;
+    text-decoration: none;
+    font-weight: 800;
+}
+.navbar a {
+    font-size: 19px;
+    color: #031540;
+    text-decoration: none;
+    transition: .4s;
+    font-weight: 500;
+    margin-left: 30px;
+}
