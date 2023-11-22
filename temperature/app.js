@@ -16,6 +16,7 @@ celciusInput.addEventListener('input', function(){
     fahrenheitInput.value = roundNumber(fTemp)
     kelvinInput.value =roundNumber(kTemp)
 })
+// convertir  kelvin en celcius et en farheineit
 kelvinInput.addEventListener('input', function(){
     let kTemp= parseFloat(kelvinInput.value)
     let cTemp =kTemp - 273.15
@@ -25,6 +26,7 @@ kelvinInput.addEventListener('input', function(){
     fahrenheitInput.value =roundNumber(fTemp)
 })
 
+// convertir  farheineit en kelvin et en celxcius
 fahrenheitInput.addEventListener('input', function(){
     let fTemp= parseFloat(fahrenheitInput.value)
     let cTemp =(fTemp-32) *(5/9)
@@ -33,6 +35,8 @@ fahrenheitInput.addEventListener('input', function(){
     celciusInput.value = roundNumber(cTemp)
     kelvinInput.value =roundNumber(kTemp)
 })
+
+// button pour effacer le contenue
 
 btn.addEventListener('click',()=>{
     celciusInput.value=""
