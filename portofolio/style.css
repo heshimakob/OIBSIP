@@ -11,7 +11,7 @@
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background-color: #fff;
+    background-color:#1e222b;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,13 +19,13 @@
 }
 .logo{
     font-size: 30px;
-    color: #031540;
+    color: #fff;
     text-decoration: none;
     font-weight: 800;
 }
 .navbar a {
     font-size: 19px;
-    color: #031540;
+    color: #fff;
     text-decoration: none;
     transition: .4s;
     font-weight: 500;
@@ -36,8 +36,8 @@
 }
 .home{
     height: 100vh;
-    background: rgb(94,102,92);
-    background: linear-gradient(-90deg, #031540 65%,#fff 35%) ;
+    background: rgb(74,100,62);
+    background: linear-gradient(-20deg, #1e222b 65%,#fff 35%) ;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -50,10 +50,10 @@
 
     width: 600px;
     height: 600px;
-    background-color: #031540;
+    background-color: #1e222b;
     border-radius: 50%;
-    border: 25px solid #fff;
-    outline: 25px solid #031540;
+    border: 25px solid #897f7f;
+    outline: 25px solid#1e222b;
 }
 .home-image img{
     position: relative;
@@ -72,7 +72,7 @@
 }
 .home-container h2{
     font-size: 30px;
-    color: #00abf0;
+    color: #5db427;
     -webkit-text-stroke: .6px #fff;
 
 }
@@ -102,7 +102,7 @@
 }
 .btn{
     padding: 15px 35px;
-    background: #00abf0;
+    background: #5db427;;
     border-radius: 20px;
     color: #fff;
     text-decoration: none;
@@ -117,6 +117,15 @@
 
     
 }
+.name_sec{
+    padding: 2rem;
+    margin: 1rem 0px;
+    text-align: center;
+    }
+    .name_sec > .title{
+        margin-bottom: 1rem;
+    
+    }
 .tribute{
     display: grid;
     grid-template-columns: 2fr 1fr ;
