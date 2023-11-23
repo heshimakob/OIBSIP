@@ -7,38 +7,51 @@
     <title>Todo app</title>
 </head>
 <body>
-    <div>
-        <h1>TODO appp</h1>
-    </div>
-    <div class="wrapper">
-        <div class="task-input">
-            <i></i>
-            <input type="text"  placeholder="New task" id="txtItem">
-            <button onclick="saveTask()">ok</button>
-
+    <header class="header">
+        <a href="#" class="logo">heshimakob@gmail.com</a>
+        <nav class="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="#">Contact</a>
+            <a href="#">About</a>
+            <a href="#">Service</a>
+        </nav>
+    </header>
+    <section class="home">
+        <div>
+            <h1>TODO appp</h1>
         </div>
-        <div class="control">
-            <div class="filter">
-                <span class="active">All</span>
-                <span id="pending">To-do</span>
-                <span id="pending">In-progress</span>
-                <span id="completed">Close</span>
+        <div class="wrapper">
+            <div class="task-input">
+                <i></i>
+                <input type="text"  placeholder="New task" id="txtItem">
+                <button onclick="saveTask()">ok</button>
+    
             </div>
-            <button class="#"> Clear All</button>
-        </div>
-        <ul class="task-box" id="myTaskList">
-            <li class="task">
-                <label >
-                    <p>Name</p>
-                </label>
-                <div class="settings">
-                    <i></i>
-                    <i></i>
+            <div class="control">
+                <div class="filter">
+                    <span class="active">All</span>
+                    <span id="pending">To-do</span>
+                    <span id="pending">In-progress</span>
+                    <span id="completed">Close</span>
                 </div>
-            </li>
-        </ul>
+                <button class="#"> Clear All</button>
+            </div>
+            <ul class="task-box" id="myTaskList">
+                <li class="task">
+                    <label >
+                        <p>Name</p>
+                    </label>
+                    <div class="settings">
+                        <i></i>
+                        <i></i>
+                    </div>
+                </li>
+            </ul>
+    
+        </div>
 
-    </div>
+    </section>
+   
     
 </body>
 </html>
