@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Todo app</title>
+</head>
+<body>
+    <div>
+        <h1>TODO appp</h1>
+    </div>
+    <div class="wrapper">
+        <div class="task-input">
+            <i></i>
+            <input type="text"  placeholder="New task" id="txtItem">
+            <button onclick="saveTask()">ok</button>
+
+        </div>
+        <div class="control">
+            <div class="filter">
+                <span class="active">All</span>
+                <span id="pending">To-do</span>
+                <span id="pending">In-progress</span>
+                <span id="completed">Close</span>
+            </div>
+            <button class="#"> Clear All</button>
+        </div>
+        <ul class="task-box" id="myTaskList">
+            <li class="task">
+                <label >
+                    <p>Name</p>
+                </label>
+                <div class="settings">
+                    <i></i>
+                    <i></i>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+    
+</body>
+</html>
+<script src="script.js"></script>
