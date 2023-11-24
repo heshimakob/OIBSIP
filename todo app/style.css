@@ -30,7 +30,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+
 
 }
 .wrapper{
@@ -86,4 +86,21 @@
     padding: 40px;
     
 
+}
+.task-box{
+justify-content: center;
+padding: 10px;
+}
+.task{
+    justify-content: space-between;
+    align-content: space-between;
+    display: flex;
+    padding: 20px;
+}
+.settings{
+    background:#fff ;
+    color: #1e222b;
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
 }

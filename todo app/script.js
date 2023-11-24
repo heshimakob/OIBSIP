@@ -35,15 +35,15 @@ function renderTaskList(){
 
         let myDiv =document.createElement("div");
         myDiv.classList.add("settings");
-        let editIcon= document.createElement("i")
-        // editIcon.classList.add("fa ");
-        editIcon.classList.add("fa fa-pencile-square");
+        let editIcon= document.createElement("i");
+        editIcon.classList.add("fa");
+        editIcon.classList.add("fa-pencil-square");
         editIcon.addEventListener("click", editTask);
         editIcon.taskId = taskListArray[index].taskId;
 
         let deleteIcon= document.createElement("i");
-        // deleteIcon.classList.add("fa");
-        deleteIcon.classList.add("fa fa-trash");
+        deleteIcon.classList.add("fa");
+        deleteIcon.classList.add("fa-trash");
         deleteIcon.addEventListener("click", deleteTask);
         deleteIcon.taskId = taskListArray[index].taskId;
 

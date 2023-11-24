@@ -23,9 +23,8 @@
                 <h1>Todo App</h1>
             </div>
             <div class="task-input">
-                <i class="fas fa-address-book"></i>
-                <i></i>
-                <input type="text"  placeholder="New task" id="txtItem">
+              
+                <input type="text"  placeholder="New task" id="txtItem" aria-hidden="true">
             
                 <i class="fas fa-plus" onclick="saveTask()"></i>
             
@@ -45,8 +44,10 @@
                         <p>Name</p>
                     </label>
                     <div class="settings">
-                        <i></i>
-                        <i></i>
+                        
+                        <i class="fa fa-pen" aria-hidden="true" onclick="editTask()"></i>
+                       
+                        <i class="fa fa-trash" aria-hidden="true" onclick="deleteTask()"></i>
                     </div>
                 </li>
             </ul>
