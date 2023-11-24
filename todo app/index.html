@@ -4,28 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+
     <title>Todo app</title>
 </head>
 <body>
     <header class="header">
         <a href="#" class="logo">heshimakob@gmail.com</a>
-        <nav class="navbar">
-            <a href="#" class="active">Home</a>
-            <a href="#">Contact</a>
-            <a href="#">About</a>
-            <a href="#">Service</a>
-        </nav>
+     
     </header>
     <section class="home">
-        <div>
-            <h1>TODO appp</h1>
-        </div>
+       
+   
+      
         <div class="wrapper">
+            <div class="title-app"> 
+                <h1>Todo App</h1>
+            </div>
             <div class="task-input">
+                <i class="fas fa-address-book"></i>
                 <i></i>
                 <input type="text"  placeholder="New task" id="txtItem">
-                <button onclick="saveTask()">ok</button>
-    
+            
+                <i class="fas fa-plus" onclick="saveTask()"></i>
+            
             </div>
             <div class="control">
                 <div class="filter">
@@ -34,7 +37,7 @@
                     <span id="pending">In-progress</span>
                     <span id="completed">Close</span>
                 </div>
-                <button class="#"> onclick="removeAll()" Cancel</button>
+                <button class="#" onclick="removeAll()">Clear all</button>
             </div>
             <ul class="task-box" id="myTaskList">
                 <li class="task">
