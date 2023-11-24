@@ -9,7 +9,7 @@ function saveTask(){
     debugger;
     let taskName= document.getElementById("txtItem").value;
     let todoObject={
-        taskId:taskListArray.length +1,
+        taskId:taskListArray.length+1,
         taskName:taskName
     };
     taskListArray.push(todoObject);
@@ -24,20 +24,22 @@ function renderTaskList(){
     debugger;
     document.getElementById("myTaskList").innerHTML="";
     for(let index = 0; index< taskListArray.length; index++){
-        let dynamicli= document.createElement("li");
-        dynamicli.classList.add("task");
+        let dyn= document.createElement("li");
+        dyn.classList.add("task");
+
         let myLabel=document.createElement("label");
         let myPara = document.createElement("p");
         myPara.textContent =taskListArray[index].taskName;
         myLabel.appendChild(myPara);
-        dynamicli.appendChild(myLabel);
+        dyn.appendChild(myLabel);
 
 
         let myDiv =document.createElement("div");
         myDiv.classList.add("settings");
+
         let editIcon= document.createElement("i");
         editIcon.classList.add("fa");
-        editIcon.classList.add("fa-pencil-square");
+        editIcon.classList.add("fa-pen");
         editIcon.addEventListener("click", editTask);
         editIcon.taskId = taskListArray[index].taskId;
 
@@ -49,15 +51,16 @@ function renderTaskList(){
 
         myDiv.appendChild(editIcon);
         myDiv.appendChild(deleteIcon);
-        dynamicli.appendChild(myDiv);
+        dyn.appendChild(myDiv);
 
-        document.getElementById("myTaskList").appendChild(dynamicli);
+        document.getElementById("myTaskList").appendChild(dyn);
 
     }
 }
 function deleteTask(event){
     debugger;
-    let index= taskListArray.findIndex(m=>m.taskId == event.target.taskId);
+    // let index= taskListArray.findIndex(m=>m.taskId == event.target.taskId);
+    let index = taskListArray.findIndex(m => m.taskId == event.target.taskId);
     taskListArray.splice(index,1);
     localStorage.setItem("todoTaskList",JSON.stringify(taskListArray));
     renderTaskList();
