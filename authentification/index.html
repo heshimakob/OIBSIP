@@ -8,12 +8,41 @@
 </head>
 <body>
     <div class="container">
+       <div class="form-box">
+         
         <form id="signupForm">
             <h2>Sign Up</h2>
-            <input type="text" placeholder="Username" id="username" required>
-            <input type="password" placeholder="Password" id="password" required>
-            <input type="submit" value="Sign Up">
+            <div class="input-group">
+                <div class="input-field">
+                    <input type="text" placeholder="Username" id="username" required>
+                
+
+                </div>
+                <div class="input-field">
+                  
+                    <input type="password" placeholder="Password" id="password" required>
+                 
+
+                </div>
+                <!-- <div class="input-field">
+            
+                    <input type="submit" value="Sign Up">
+
+                </div> -->
+             
+             
+                <p>forget password <a href="#">click</a></p>
+
+            </div>
+            <div class="btn-field">
+                <button type="submit"> Sign Up</button>
+                <button type="submit" class="disable"> Sign In</button>
+            </div>
+        
+           
         </form>
+
+       </div>
         <form id="signinForm">
             <h2>Sign In</h2>
             <input type="text" placeholder="Username" id="signinUsername" required>

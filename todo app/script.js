@@ -47,7 +47,7 @@ function renderTaskList(){
         deleteIcon.classList.add("fa");
         deleteIcon.classList.add("fa-trash");
         deleteIcon.addEventListener("click", deleteTask);
-        deleteIcon.taskId = taskListArray[index].taskId;
+        deleteIcon.taskId = taskListArray[index].dtaskId;
 
         myDiv.appendChild(editIcon);
         myDiv.appendChild(deleteIcon);
