@@ -126,13 +126,69 @@
         margin-bottom: 1rem;
     
     }
+    .card {
+        background-color: #fff;
+        padding: 20px;
+        text-align: center;
+        border-radius: 5px;
+        margin: 10px;
+        display: inline-block;
+      }
+      
+      .card i {
+        font-size: 40px;
+        margin-bottom: 10px;
+      }
+      .card button{
+        width: 100px;
+        height: 40px;
+       margin-top: 30px;
+       color: #fff;
+       background: #1e222b;
+      }
+      
+      .cards-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 50vh;
+        padding: 25px;
+        background:#fff;
+      }
+      .cards-section-tech {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 50vh;
+        padding: 35px;
+        color: #fff;
+        background: #1e222b;
+      }
+      .card-tech img {
+        width: 200px;
+      
+      }
+      .card-tech button{
+        width: 100px;
+        height: 40px;
+       margin-top: 30px;
+       color: #1e222b;
+       background: #fff;
+      }
+.name_sec{
+    background:#fff;
+    color: #1e222b;
+
+}
 .tribute{
     display: grid;
     grid-template-columns: 2fr 1fr ;
     max-width: 78rem;
     margin: 0px auto;
-    background: #fff;
-    color: black;
+    background:#1e222b;
+    color: #fff;
     align-items: center;
     padding: 0; 
 }
@@ -148,6 +204,8 @@
     margin: 2rem auto;
     padding: 0px 0.5rem;
     max-width: 40rem;
+    background:#1e222b;
+    color: #fff;
 }
 .bio > h2 {
     margin-bottom: 1rem;
@@ -161,4 +219,21 @@
 }
 .bio > hr {
     margin-top: 2rem;
+}
+footer {
+    height: 20vh;
+    background:#1e222b;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .social-icons a {
+    color: #fff;
+    font-size: 24px;
+    margin-right: 10px;
+  }
+.copy{
+    font-size: 25px;
+    color: #fff;
+    margin-top: 60px;
 }

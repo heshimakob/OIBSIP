@@ -1,6 +1,7 @@
-import Home from './screens/Home';
 import { BrowserRouter as Router,Route, Routes } from 'react-router-dom';
-import Login from '../screens/Login'
+import LoginAdmin from './screens/LoginAdmin';
+import HomeAdmin from './screens/HomeAdmin';
+
 
 
 function App() {
@@ -8,9 +9,10 @@ function App() {
     <Router>
       <div>
         <Routes>
-          {/* <Route exact path="/" element={<Home/>}/>
-          <Route exact path="/order" element={<Order/>}/> */}
-          <Route exact path="/" element={<Login/>}/>
+       
+          {/* <Route exact path="/order" element={<Order/>}/> */}
+          <Route exact path="/" element={<LoginAdmin/>}/>
+          <Route exact path="/home" element={<HomeAdmin/>}/>
         </Routes>
       </div>
 
