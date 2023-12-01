@@ -32,7 +32,7 @@
     margin-left: 30px;
 }
 .navbar a:hover, .navbar a.active {
-    color:black;
+    color:#5db427;
 }
 .home{
     height: 100vh;
@@ -124,6 +124,7 @@
     }
     .name_sec > .title{
         margin-bottom: 1rem;
+        font-size: 35px;
     
     }
     .card {
@@ -139,12 +140,37 @@
         font-size: 40px;
         margin-bottom: 10px;
       }
-      .card button{
-        width: 100px;
-        height: 40px;
-       margin-top: 30px;
-       color: #fff;
-       background: #1e222b;
+      .card p{
+        padding: 30px;
+      }
+   
+      .bouton{
+        margin-top: 40px;
+        padding: 15px 35px;
+        background:  #1e222b;
+        border-radius: 20px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 1px;
+        
+
+      }
+      .cards-sect{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 50vh;
+        padding: 25px;
+        background:#fff;
+
+      }
+      .card-text{
+        font-size: 35px;
+        font-weight: 900;
+        color: #1e222b;
+        padding: 25px;
+
       }
       
       .cards-section {
@@ -152,16 +178,34 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        height: 50vh;
+        margin-top: 60px;
+      
         padding: 25px;
         background:#fff;
+        
+      }
+      .tech{
+        color: #fff;
+        background: #1e222b;
+        height: 50vh;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+      }
+      .tech-text{
+        font-size: 35px;
+        font-weight: 900;
+        color: #fff;
+        padding: 25px;
       }
       .cards-section-tech {
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
-        height: 50vh;
+        margin-top: 60px;
+   
         padding: 35px;
         color: #fff;
         background: #1e222b;
