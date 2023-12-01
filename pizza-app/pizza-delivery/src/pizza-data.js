@@ -10,7 +10,7 @@ const pizzas = [
         },
       ],
       category: "veg",
-      image: "/images/margherita.jpg",
+      image: "/images/pizza1.jpg",
       description: "Classic delight with 100% real mozzarella cheese",
     },
     {
@@ -24,7 +24,7 @@ const pizzas = [
         },
       ],
       category: "veg",
-      image: "/images/farmhouse.jpg",
+      image: "/images/pizza2.jpg",
       description:
         "Delightful combination of onion, capsicum, tomato & grilled mushroom",
     },
@@ -41,7 +41,7 @@ const pizzas = [
       category: "veg",
       description:
         "The awesome foursome! Golden corn, black olives, capsicum, red paprika",
-      image: "/images/veggie_paradise.jpg",
+      image: "/images/pizza3.jpg",
     },
     {
       name: "Chicken Golden Delight",

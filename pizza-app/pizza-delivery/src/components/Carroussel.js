@@ -45,7 +45,7 @@ export default function Carroussel({ pizza }) {
           <Row>
             <Col md={6}> Price:${pizza.prices[0][varient] * quantity} </Col>
             <Col>
-              <Button className="bg-primary text-white">Add to store</Button>
+              <Button className="bg-primary text-white" style={{width:'260px',height:'50px'}}>Add to store</Button>
             </Col>
           </Row>
         </Card.Body>
@@ -70,7 +70,7 @@ export default function Carroussel({ pizza }) {
             Close
           </Button>
           <Button variant="primary" onClick={handleClose}>
-            Save Changes
+            Add to store
           </Button>
         </Modal.Footer>
       </Modal>
