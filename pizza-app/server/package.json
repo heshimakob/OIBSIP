@@ -4,12 +4,16 @@
   "description": "pizza backend",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node server.js",
+    "server":"nodemon server.js"
   },
   "author": "heshimakob@gmail.com",
   "license": "MIT",
   "dependencies": {
     "colors": "^1.4.0",
+    "concurrently": "^8.2.2",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "mongoose": "^8.0.2",
     "morgan": "^1.10.0"
