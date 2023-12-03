@@ -5,8 +5,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node server.js",
-    "server":"nodemon server.js"
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "data:import":"node seeder.js"
   },
   "author": "heshimakob@gmail.com",
   "license": "MIT",
