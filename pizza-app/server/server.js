@@ -3,7 +3,7 @@ const dotenv=require('dotenv')
 const connectDB=require('./config/config');
 require("colors");
 const morgan=require("morgan");
-const { bgGreen } = require("colors");
+
 
 
 dotenv.config()
