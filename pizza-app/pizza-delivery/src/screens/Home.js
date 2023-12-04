@@ -1,29 +1,41 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Landing from '../components/landing';
-import Carroussel from '../components/Carroussel';
+import Pizza from '../components/Pizza';
 import { Container,Row,Col } from 'react-bootstrap';
-import AllPizza from '../pizza-data'
+import {useDispatch,useSelector} from 'react-redux';
+import { getAllPizzas } from '../actions/pizzaAction';
 
 
 
 export default function Home() {
-  return (
-    <div>
+  const dispatch=useDispatch();
+  const pizzastate= useSelector((state)=>state.getAllPizzaReducer)
+  const {loading,pizzas,error}=pizzastate;
+  useEffect(()=>{dispatch(getAllPizzas())},[dispatch]);
+
+  return  (
+    <>
         <Navbar/>
         <div>
             <Landing/>
             <Container>
-              <Row>
-                {AllPizza.map(pizza=>(
-                  <Col md={4}>
-                    <Carroussel pizza={pizza}/>
-                  </Col>
+              {loading ? (<h1>...loading</h1>)
+              :error ? (<h1>error</h1>)
+              : (
+                <Row>
+              {pizzas.map((pizza)=>(
+                <Col md={4}>
+                  <Pizza pizza={pizza}/>
+                </Col>
 
-                ))}
+              ))}
 
-              </Row>
+            </Row>
+              )
+              }
+             
             </Container>
             
             
@@ -31,6 +43,6 @@ export default function Home() {
         </div>
         <Footer/>
         
-    </div>
+    </>
   )
 }

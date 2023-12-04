@@ -7,6 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "server": "nodemon server.js",
+    "pizza-delivery":"npm start --prefix ../pizza-delivery",
+    "dev":" concurrently \"npm run server\" \"npm run pizza-delivery\" ",
     "data:import":"node seeder.js"
   },
   "author": "heshimakob@gmail.com",

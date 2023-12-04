@@ -1,8 +1,8 @@
-import axios from 'axios'
+import axios from 'axios';
 export const getAllPizzas=()=> async(dispatch)=>{
-    dispatch({type:'GET_PIZZAS_REQUEST'})
+    dispatch({type:'GET_PIZZAS_REQUEST'});
     try {
-        const res =  await axios.get('/api/pizzas/getPizzas')
+        const res =  await axios.get('/api/pizzas/getAllPizzas')
         console.log(res)
         dispatch({type:'GET_PIZZAS_SUCCESS', payload:res.data})
         

@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Card, Row, Col, Button, Modal } from "react-bootstrap";
 
-export default function Carroussel({ pizza }) {
+export default function Pizza({ pizza }) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const [varient, setVarient] = useState("small");
+  const [variant, setVarient] = useState("small");
   const [quantity, setQuantity] = useState(1);
   return (
     <>
@@ -19,12 +19,15 @@ export default function Carroussel({ pizza }) {
               <Col md={6}>
                 <h6>Varient</h6>
                 <select
-                  value={varient}
+                  value={variant}
                   onChange={(e) => setVarient(e.target.value)}
                 >
-                  {pizza.varients.map((varient) => (
+                  {/* {pizza.varients.map((varient) => (
                     <option>{varient}</option>
-                  ))}
+                  ))} */}
+                  {pizza.varients && pizza.varients.map((varient) => (
+  <option key={varient}>{variant}</option>
+))}
                 </select>
               </Col>
               <Col md={6}>
@@ -43,7 +46,7 @@ export default function Carroussel({ pizza }) {
             </Row>
           </Card.Text>
           <Row>
-            <Col md={6}> Price:${pizza.prices[0][varient] * quantity} </Col>
+            <Col md={6}> Price:${pizza.prices[0][variant] * quantity} </Col>
             <Col>
               <Button className="bg-primary text-white" style={{width:'260px',height:'50px'}}>Add to store</Button>
             </Col>
