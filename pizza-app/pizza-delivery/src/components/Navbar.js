@@ -2,8 +2,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import pizza from "../assets/images/pizza.png"
+import { useDispatch,useSelector } from "react-redux";
 
 export default function () {
+  const dispatch=useDispatch();
+  const cartState=useSelector((state)=>state.cartReducer);
   return (
     <div className="gray-200">
       <nav className="flex justify-between p-6 px-4">
@@ -34,8 +37,9 @@ export default function () {
                   className="text-coolGray-500 hover:text-coolGray-900 font-medium"
                   to="/Order"
                 >
-                  Order
+                  Order{cartState.cartItems.length}
                 </Link>
+                
               </li>
               <li className="mr-12">
                 <Link

@@ -1,12 +1,20 @@
 import React, { useState } from "react";
 import { Card, Row, Col, Button, Modal } from "react-bootstrap";
+import { Dispatch,useDispatch,useSelector } from "react-redux";
+import { addToCart } from "../actions/cartAction";
 
 export default function Pizza({ pizza }) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const [variant, setVarient] = useState("small");
+
+  const dispatch=useDispatch()
+  const addToCartHandler=()=>{
+    dispatch(addToCart(pizza,quantity,varient))
+  }
+
+  const [varient, setVarient] = useState("small");
   const [quantity, setQuantity] = useState(1);
   return (
     <>
@@ -19,14 +27,14 @@ export default function Pizza({ pizza }) {
               <Col md={6}>
                 <h6>Varient</h6>
                 <select
-                  value={variant}
+                  value={varient}
                   onChange={(e) => setVarient(e.target.value)}
                 >
                   {/* {pizza.varients.map((varient) => (
                     <option>{varient}</option>
                   ))} */}
                   {pizza.varients && pizza.varients.map((varient) => (
-  <option key={varient}>{variant}</option>
+  <option key={varient}>{varient}</option>
 ))}
                 </select>
               </Col>
@@ -46,9 +54,9 @@ export default function Pizza({ pizza }) {
             </Row>
           </Card.Text>
           <Row>
-            <Col md={6}> Price:${pizza.prices[0][variant] * quantity} </Col>
+            <Col md={6}> Price:${pizza.prices[0][varient] * quantity} </Col>
             <Col>
-              <Button className="bg-primary text-white" style={{width:'260px',height:'50px'}}>Add to store</Button>
+              <Button className="bg-primary text-white" style={{width:'260px',height:'50px'}} onClick={addToCartHandler}>Add to store</Button>
             </Col>
           </Row>
         </Card.Body>
