@@ -69,7 +69,7 @@ export default function () {
               </Link>
               <Link
                 className="inline-block py-2 px-4 text-sm leading-5 text-green-50 bg-green-500 hover:bg-green-600 font-medium focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-md"
-                to="#"
+                to="register"
               >
                 Sign Up
               </Link>

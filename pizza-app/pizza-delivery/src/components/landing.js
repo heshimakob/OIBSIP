@@ -1,13 +1,15 @@
 import React from 'react'
 import pizza2 from '../assets/images/pizza2.jpg'
+import back from '../assets/images/back.jpeg'
 
 export default function () {
   return (
     <section
     className='position-relative bg-white overflow-hidden'
-    style={{
-      backgroundImage: 'url("flex-assets/elements/pattern-light.png")',
-    }}>
+    // style={{
+    //   backgroundImage: 'url("flex-assets/elements/pattern-light.png")',
+    // }}
+    >
 
 
     
