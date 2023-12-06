@@ -77,7 +77,7 @@ export default function () {
       <div className='row align-items-center justify-content-between pt-12 pb-36'>
         <div className='col-auto'>
           <p className='mb-0 fs-11 fw-medium text-secondary-light'>
-            © 2021 Flex. All rights reserved.
+            © 2023 Pizza-delivery. Oasisis info byte.
           </p>
         </div>
         <div className='col-auto'>
