@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Card, Row, Col, Button, Modal } from "react-bootstrap";
-import { Dispatch,useDispatch,useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addToCart } from "../actions/cartAction";
 
 export default function Pizza({ pizza }) {

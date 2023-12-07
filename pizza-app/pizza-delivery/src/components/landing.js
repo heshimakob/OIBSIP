@@ -1,6 +1,6 @@
 import React from 'react'
 import pizza2 from '../assets/images/pizza2.jpg'
-import back from '../assets/images/back.jpeg'
+
 
 export default function () {
   return (

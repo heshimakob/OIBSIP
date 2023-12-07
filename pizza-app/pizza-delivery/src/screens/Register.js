@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import { Container,Form ,Button } from 'react-bootstrap';
-import { useDispatch,useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { registerUser } from '../actions/userAction';
 
 const Register = () => {
