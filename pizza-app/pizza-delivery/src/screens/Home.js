@@ -6,6 +6,8 @@ import Pizza from '../components/Pizza';
 import { Container,Row,Col } from 'react-bootstrap';
 import {useDispatch,useSelector} from 'react-redux';
 import { getAllPizzas } from '../actions/pizzaAction';
+import Loader from '../components/Loader';
+import { Error } from '../components/Error';
 
 
 
@@ -21,8 +23,8 @@ export default function Home() {
         <div>
             <Landing/>
             <Container>
-              {loading ? (<h1>...loading</h1>)
-              :error ? (<h1>error</h1>)
+              {loading ? (<Loader/>)
+              :error ? (<Error>error de chargement{error}</Error>)
               : (
                 <Row>
               {pizzas.map((pizza)=>(

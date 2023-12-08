@@ -20,6 +20,7 @@ app.use(morgan("dev"));
 
 app.use('/api/pizzas', require('./routes/pizzaRoute'));
 app.use('/api/users', require('./routes/userRoutes'));
+app.use('/api/orders', require('./routes/orderRoute'));
 
 app.get('/',(req,res)=>{
     res.send("<h1>Hello from our server nodemon</h1>");

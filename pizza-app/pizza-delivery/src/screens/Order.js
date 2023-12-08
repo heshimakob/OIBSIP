@@ -1,10 +1,11 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { Container ,Row,Col,Button} from "react-bootstrap";
+import { Container ,Row,Col} from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import {FaMinusCircle,FaTrash, FaPlusCircle} from 'react-icons/fa';
 import { addToCart,deleteFromCart } from "../actions/cartAction";
+import Checkout from "../components/Checkout";
 
 export default function Order() {
   const cartState =useSelector(state=>state.cartReducer)
@@ -22,7 +23,7 @@ export default function Order() {
           <h1>Payment</h1>
           <h4>subTotal :</h4>
           <h4>${subTotal}</h4> 
-          <Button>Verify</Button>
+         <Checkout subTotal={subTotal}/>
           </Col>
           <Col md={6}
           >

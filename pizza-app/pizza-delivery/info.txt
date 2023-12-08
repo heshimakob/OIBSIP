@@ -1,0 +1,10 @@
+stripe publish key 
+pk_test_51OKwNHI6LpqwViK1HtYlVGjZTKE8XhRt8u4xi9Z0hHQWP6ezeA5aKk3YXf1nnHNoCP6EDkk2znYOT0ZEcTVqPcP100r1KFqDWb
+
+secret key 
+
+sk_test_51OKwNHI6LpqwViK1pwJZCWkNZ2EZZCTXF8j52ny2Z14SO8kvGEI50CW2n83f6nburUR3Jwkdpyjwl80r9q6TD9U4001xbXsmKF
+
+
+
+https://stripe.com/docs/api/idempotent_requests?lang=node
