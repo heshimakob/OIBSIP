@@ -21,8 +21,9 @@ export default function () {
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/order">
-              Order {cartState.cartItems.length}
+              Store {cartState.cartItems.length}
             </Nav.Link>
+            <Nav.Link to="/orders">Orders</Nav.Link>
             <NavDropdown title="Dropdown" id="collapsible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
@@ -40,7 +41,7 @@ export default function () {
               <>
                 {/* <Nav.Link>{currentUser.name}</Nav.Link> */}
                 <NavDropdown title={currentUser.name} id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">Order</NavDropdown.Item>
+                  <NavDropdown.Item to="/orders">Order</NavDropdown.Item>
 
                   <NavDropdown.Item
                     onClick={() => {
