@@ -16,7 +16,7 @@ export const placeOrder =(token,subTotal)=>async(dispatch,getState)=>{
 export const getUserOrders=()=>async(dispatch,getState)=>{
     const currentUser =getState().loginUserReducer.currentUser
     dispatch({
-        tyep:'USER_ORDER_REQUEST'
+        type:'USER_ORDER_REQUEST'
     })
     try {
         const response=await axios.post('/api/orders/getuserorder',{userid:currentUser._id})

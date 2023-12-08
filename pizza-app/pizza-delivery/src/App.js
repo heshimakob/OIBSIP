@@ -4,6 +4,7 @@ import Login from './screens/Login';
 import Order from './screens/Order';
 import Register from './screens/Register';
 import OrderScreen from './screens/OrderScreen';
+import { Card } from './screens/Card';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home/>}/>
           <Route exact path="/order" element={<Order/>}/>
+          <Route exact path="/card" element={<Card/>}/>
           <Route exact path="/orders" element={<OrderScreen/>}/>
           <Route exact path="/login" element={<Login/>}/>
           <Route exact path="/register" element={<Register/>}/>
