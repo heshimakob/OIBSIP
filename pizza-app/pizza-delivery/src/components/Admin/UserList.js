@@ -1,21 +1,19 @@
 import React from 'react'
-import NavBarAdmin from './NavBarAdmin'
-import Navbar from '../Navbar'
-import { Container,Table,Row ,Col} from 'react-bootstrap'
+
+import { Container,Row ,Col} from 'react-bootstrap'
 
 const UserList = () => {
   return (
     <>
-    <Navbar/>
-    <NavBarAdmin/>
+  
     <Container>
       <Row>
         <Col>
-        <h1>Title</h1>
+        <h1>All users</h1>
         </Col>
 
       </Row>
-    <Table striped bordered hover variant="dark">
+    {/* <Table striped bordered hover variant="dark">
       <thead>
         <tr>
           <th>#</th>
@@ -43,7 +41,7 @@ const UserList = () => {
           <td>@twitter</td>
         </tr>
       </tbody>
-    </Table>
+    </Table> */}
     </Container>
     </>
   )

@@ -13,7 +13,7 @@ const NavBarAdmin = () => {
         <Nav.Link href="/userlist"  >All users</Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link eventKey="/admin/pizzalist" >All pizzas</Nav.Link>
+        <Nav.Link href="/pizzalist" >All pizzas</Nav.Link>
       </Nav.Item>
       <Nav.Item>
         <Nav.Link eventKey="link-2">Add new pizza</Nav.Link>

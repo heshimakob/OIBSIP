@@ -6,17 +6,19 @@ import Register from './screens/Register';
 import OrderScreen from './screens/OrderScreen';
 import { Card } from './screens/Card';
 import Admin from './screens/Admin';
-import UserList from './components/Admin/UserList';
+// import UserList from './components/Admin/UserList';
+// import UserList from './components/Admin/PizzaList';
 
 function App() {
   return (
     <Router>
       <div>
         <Routes>
-        <Route exact path="/admin" element={<Admin/>}/>
+        
        
           <Route exact path="/" element={<Home/>}/>
-          <Route exact path="/userlist" element={<UserList/>}/>
+          <Route exact path="/admin" element={<Admin/>}/>
+         
           <Route exact path="/order" element={<Order/>}/>
           <Route exact path="/card" element={<Card/>}/>
           <Route exact path="/orders" element={<OrderScreen/>}/>
