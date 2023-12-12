@@ -5,6 +5,8 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
+import { addPizza } from '../../actions/pizzaAction';
+import { useDispatch,useSelector } from 'react-redux';
 
 
 const AddNewPizza = () => {
@@ -15,6 +17,8 @@ const AddNewPizza = () => {
     const[description,setdecription]=useState('')
     const[image,setimage]=useState('')
     const[category,setcategory]=useState('')
+    const dispatch=useDispatch()
+
     const submitForm =(e)=>{
         e.preventDefault();
         const pizza ={
@@ -27,7 +31,7 @@ const AddNewPizza = () => {
            
 
         }
-        console.log(pizza)
+        dispatch(addPizza)
     }
 
     // const [validated, setValidated] = useState(false);

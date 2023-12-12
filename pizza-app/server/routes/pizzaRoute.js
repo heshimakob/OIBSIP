@@ -12,6 +12,23 @@ router.get('/getAllPizzas', async(req,res)=>{
         res.json({message:error})
         
     }
-})
+});
+
+
+router.get('/addpizza', async(req,res)=>{
+    try {
+        const newPizza= new pizza ({
+            name:pizza.name,
+            image:pizza.image,
+            varients:['small','medium','larg'],
+            description:pizza.category,
+            prices:[pizza.prices]
+        })
+        
+    } catch (error) {
+        res.json({message:error})
+        
+    }
+});
 
 module.exports=router;
