@@ -22,12 +22,13 @@ const orderSchema=mongoose.Schema({
         //required:true
     },
     isDeliverd:{
-        type:String,
+        type:Boolean,
+        default:false,
         //required:true
     },
     transectionId:{
         type:String,
         //required:true
     },
-},{timetamps:true})
+},{timestamps:true})
 module.exports=mongoose.model('order',orderSchema)

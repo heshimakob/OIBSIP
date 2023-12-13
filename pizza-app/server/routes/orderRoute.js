@@ -56,8 +56,40 @@ router.post('/placeorder',async(req,res)=>{
 router.post("/getuserorder",async(req,res)=>{
     const {userid}=req.body;
     try {
-        const orders=await order.find({userid});
+        const orders=await order.find({userid}).sort({_id:"-1"});
         res.status(200).send(orders);
+        
+    } catch (error) {
+        res.status(400).json({
+            message:"wrong",
+            error:error.stack,
+        });
+        
+    }
+});
+router.get("/alluserorder",async(req,res)=>{
+   
+    try {
+        const orders=await order.find();
+        res.status(200).send(orders);
+        
+    } catch (error) {
+        res.status(400).json({
+            message:"wrong",
+            error:error.stack,
+        });
+        
+    }
+});
+
+router.post("/deliverorder",async(req,res)=>{
+    const orderid= req.body.orderid
+   
+    try {
+        const order=await Order.findOne({_id:orderid});
+        order.isDeliverd=true;
+        await order.save();
+        res.status(200).send("order success delivered");
         
     } catch (error) {
         res.status(400).json({

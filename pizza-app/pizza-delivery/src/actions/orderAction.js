@@ -28,3 +28,38 @@ export const getUserOrders=()=>async(dispatch,getState)=>{
     }
 
 };
+export const deliverOrder=(orderid)=>async(dispatch,getState)=>{
+    // const currentUser =getState().loginUserReducer.currentUser
+    dispatch({
+        type:'GET_ALL_ORDER_REQUEST'
+    })
+    try {
+     
+        const response=await axios.post('/api/orders/deliverorder',{orderid})
+        alert('delicerd succcesss')
+        const orders=await axios.get('/api/orders/alluserorder')
+
+        // console.log(response)
+        dispatch({type:'GET_ALL_ORDER_SUCCESS',payload:orders.data});
+        window.location.href="/admin/orderlist"
+        
+    } catch (error) {
+        dispatch({type:'GET_ALL_ORDER_FAIL',payload:error});
+    }
+
+};
+export const getAllOrders=()=>async(dispatch,getState)=>{
+    // const currentUser =getState().loginUserReducer.currentUser
+    dispatch({
+        type:'ALL_ORDER_REQUEST'
+    })
+    try {
+        const response=await axios.get('/api/orders/alluserorder')
+        // console.log(response)
+        dispatch({type:'ALL_ORDER_SUCCESS',payload:response.data});
+        
+    } catch (error) {
+        dispatch({type:'ALL_ORDER_FAIL',payload:error});
+    }
+
+};
