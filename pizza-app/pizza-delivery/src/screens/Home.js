@@ -8,6 +8,7 @@ import {useDispatch,useSelector} from 'react-redux';
 import { getAllPizzas } from '../actions/pizzaAction';
 import Loader from '../components/Loader';
 import { Error } from '../components/Error';
+import Filter from '../components/Filter';
 
 
 
@@ -22,7 +23,9 @@ export default function Home() {
         <Navbar/>
         <div>
             <Landing/>
+            
             <Container>
+            <Filter/>
               {loading ? (<Loader/>)
               :error ? (<Error>error de chargement{error}</Error>)
               : (
