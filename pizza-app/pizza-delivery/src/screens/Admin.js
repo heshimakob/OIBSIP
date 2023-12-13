@@ -6,6 +6,7 @@ import AddNewPizza from '../components/Admin/AddNewPizza';
 import OrderList from '../components/Admin/OrderList';
 import Navbar from '../components/Navbar';
 import {useSelector} from 'react-redux'
+import EditPizza from '../components/Admin/EditPizza';
 
 const Admin = () => {
   const userStete=useSelector((state)=>state.loginUserReducer)
@@ -28,6 +29,8 @@ const Admin = () => {
         return <AddNewPizza />;
       case 'orderlist':
         return <OrderList />;
+        case 'editpizza':
+          return <EditPizza />;
       default:
         return null;
     }
@@ -44,6 +47,7 @@ const Admin = () => {
               <Button onClick={() => setActiveComponent('pizzalist')}>All pizzas</Button>
               <Button onClick={() => setActiveComponent('addnewpizza')}>Add new pizza</Button>
               <Button onClick={() => setActiveComponent('orderlist')}>All orders</Button>
+              <Button onClick={() => setActiveComponent('editpizza')}>EditPizza</Button>
             </ButtonGroup>
           </Col>
           <Col md={10}>{renderComponent()}</Col>

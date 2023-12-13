@@ -7,6 +7,7 @@ import {AiFillDelete, AiFillEdit} from 'react-icons/ai'
 import Loader from '../../components/Loader';
 import { Error } from '../../components/Error';
 import Pizza from '../../components/Pizza';
+import { Link } from 'react-router-dom';
 const PizzaList = () => {
   const dispatch=useDispatch();
   const pizzastate= useSelector((state)=>state.getAllPizzaReducer)
@@ -42,7 +43,10 @@ const PizzaList = () => {
                         large: {pizza.prices[0]["large"] }
                         </td>
                         <td>{pizza.category }</td>
-                        <td><AiFillEdit/> &nbsp; <AiFillDelete/></td>
+                        <td>
+                          <Link to ={`/Admin/editpizza/${pizza._id}`}>
+                          <AiFillEdit/>
+                          </Link> &nbsp; <AiFillDelete/></td>
                       </tr>
                     ))
                   }

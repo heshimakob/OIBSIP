@@ -6,6 +6,7 @@ import Register from './screens/Register';
 import OrderScreen from './screens/OrderScreen';
 import { Card } from './screens/Card';
 import Admin from './screens/Admin';
+import EditPizza from './components/Admin/EditPizza';
 // import UserList from './components/Admin/UserList';
 // import UserList from './components/Admin/PizzaList';
 
@@ -18,6 +19,8 @@ function App() {
        
           <Route exact path="/" element={<Home/>}/>
           <Route exact path="/admin" element={<Admin/>}/>
+          {/* <Route exact path="/admin/editpizza" element={<EditPizza/>}/> */}
+          <Route path="/editpizza/:id" element={<EditPizza/>}/>
          
           <Route exact path="/order" element={<Order/>}/>
           <Route exact path="/card" element={<Card/>}/>

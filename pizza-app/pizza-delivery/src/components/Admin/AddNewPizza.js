@@ -3,10 +3,13 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
+
 import Row from 'react-bootstrap/Row';
 import { addPizza } from '../../actions/pizzaAction';
 import { useDispatch,useSelector } from 'react-redux';
+import Loader from '../../components/Loader'
+import {Error} from '../../components/Error'
+import Success from '../../components/Success'
 
 
 const AddNewPizza = () => {
@@ -17,6 +20,9 @@ const AddNewPizza = () => {
     const[description,setdecription]=useState('')
     const[image,setimage]=useState('')
     const[category,setcategory]=useState('')
+
+    const addPizzaState=useSelector((state)=>state.addPizzaReducer)
+    const {loading,error,success}=addPizzaState
     const dispatch=useDispatch()
 
     const submitForm =(e)=>{
@@ -31,7 +37,7 @@ const AddNewPizza = () => {
            
 
         }
-        dispatch(addPizza)
+        dispatch(addPizza(pizza))
     }
 
     // const [validated, setValidated] = useState(false);
@@ -47,6 +53,9 @@ const AddNewPizza = () => {
     // };
   return (
     <>
+    {loading && (<Loader/>)}
+    {error && (<Error error="added pizza failled"/>)}
+    {success && (<Success success="pizza added successfully"/>)}
   
   <Form  onSubmit={submitForm} >
       <Row className="mb-3">

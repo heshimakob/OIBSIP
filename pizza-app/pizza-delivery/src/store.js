@@ -1,7 +1,7 @@
 import {createStore,combineReducers,applyMiddleware} from 'redux'
 import thunk from 'redux-thunk'
 import {composeWithDevTools} from 'redux-devtools-extension'
-import {getAllPizzaReducer,addPizzaReducer} from './reducers/pizzaReducer'
+import {getAllPizzaReducer,addPizzaReducer,getPizzaByIdReducer} from './reducers/pizzaReducer'
 import { cartReducer } from './reducers/cartReducer'
 import { registerUserReducer ,loginUserReducer} from './reducers/userReducer'
 import { placeOrderReducer,getUserOrdersReducer} from './reducers/orderReducer'
@@ -15,6 +15,7 @@ const rootReducer =combineReducers({
     placeOrderReducer:placeOrderReducer,
     getUserOrdersReducer:getUserOrdersReducer,
     addPizzaReducer:addPizzaReducer,
+    getPizzaByIdReducer:getPizzaByIdReducer,
  
 
     
