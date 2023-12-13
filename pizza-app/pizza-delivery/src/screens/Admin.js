@@ -29,8 +29,7 @@ const Admin = () => {
         return <AddNewPizza />;
       case 'orderlist':
         return <OrderList />;
-        case 'editpizza':
-          return <EditPizza />;
+       
       default:
         return null;
     }
@@ -40,14 +39,14 @@ const Admin = () => {
     <>
       <Navbar />
       <Container>
-        <Row>
+        <Row  >
           <Col md={2}>
-            <ButtonGroup vertical style={{ minHeight: '800px' }}>
+            <ButtonGroup vertical style={{ minHeight: '1000px' ,background:"red"}}>
               <Button onClick={() => setActiveComponent('userlist')}>All users</Button>
               <Button onClick={() => setActiveComponent('pizzalist')}>All pizzas</Button>
               <Button onClick={() => setActiveComponent('addnewpizza')}>Add new pizza</Button>
               <Button onClick={() => setActiveComponent('orderlist')}>All orders</Button>
-              <Button onClick={() => setActiveComponent('editpizza')}>EditPizza</Button>
+             
             </ButtonGroup>
           </Col>
           <Col md={10}>{renderComponent()}</Col>
