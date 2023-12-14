@@ -1,14 +1,18 @@
 import React from 'react'
-import pizza2 from '../assets/images/pizza2.jpg'
+import pizza1 from '../assets/images/pizza1.jpg'
 
 
 export default function () {
   return (
     <section
-    className='position-relative bg-white overflow-hidden'
-    // style={{
-    //   backgroundImage: 'url("flex-assets/elements/pattern-light.png")',
-    // }}
+    className='position-relative bg-gray overflow-hidden'
+    style={{
+      backgroundImage: `url(${pizza1})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      height: '100vh', // Ajustez la hauteur selon vos besoins
+    }}
     >
 
 
@@ -17,6 +21,9 @@ export default function () {
       <div className='pt-28 pb-28 position-relative'>
         <div className='row g-16'>
           <div className='col-12 col-md-6'>
+
+
+{/*             
             <div className='mw-md-lg'>
               <span className='mb-4 badge bg-success text-white text-uppercase shadow'>
                 Header
@@ -52,7 +59,55 @@ export default function () {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
+
+<div className='mw-md-lg'>
+  <span className='mb-4 badge bg-success text-white text-uppercase shadow'>
+    Header
+  </span>
+  <h1
+    className='mb-6 font-heading '
+    style={{
+      letterSpacing: '-1px',
+      fontSize: '100px',
+      fontWeight: 900,
+      color: '#fff',
+    }}
+  >
+    A small business is only as good as its tools.
+  </h1>
+  <p
+    className='mb-8 fs-9 fw-medium text-white'
+    style={{
+      fontSize: '25px',
+      fontWeight: 700,
+      color: '#fff',
+    }}
+  >
+    We’re different. Flex is the only saas business platform that lets you run
+    your business on one platform, seamlessly across all digital channels.
+  </p>
+  <div className='row g-4'>
+    <div className='col-12 col-md-auto'>
+      <a
+        className='btn btn-lg btn-success w-100 text-success-light shadow'
+        href='#'
+      >
+        Request a Demo
+      </a>
+    </div>
+    <div className='col-12 col-md-auto'>
+      <div className='bg-white rounded'>
+        <a
+          className='btn btn-lg '
+          href='#'
+        >
+          Sign Up
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
           </div>
           <div className='col-12 col-md-6'>
             <div className='row justify-content-center'>
@@ -69,11 +124,11 @@ export default function () {
                   src='flex-assets/elements/dots-blue.svg'
                   alt=''
                 />
-                <img
+                {/* <img
                   className='position-relative img-fluid'
                   src={pizza2}
                   alt=''
-                />
+                /> */}
               </div>
             </div>
           </div>

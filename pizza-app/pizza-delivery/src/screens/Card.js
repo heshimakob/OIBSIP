@@ -35,7 +35,59 @@ export const Card = () => {
           <Col md={6}
           >
             <h1>Order</h1>
-            <Row>
+            <Row className="mt-4">
+  {cartItems.map(item => (
+    <Col md={12} className="mb-4" key={item.id}>
+      <div className="d-flex align-items-center justify-content-between">
+        <div>
+          <h4>{item.name} {item.varient}</h4>
+          <h5>
+            Price: {item.quantity} X {item.prices[0][item.varient]} = {item.price}
+          </h5>
+          <h6 className="d-flex align-items-center">
+            Quantité: &nbsp;
+            <FaMinusCircle
+              style={{ cursor: "pointer" }}
+              onClick={() => {
+                dispatch(addToCart(item, item.quantity - 1, item.varient));
+              }}
+              className="text-danger"
+            />
+            <span className="mx-2">{item.quantity}</span>
+            <FaPlusCircle
+              style={{ cursor: "pointer" }}
+              onClick={() => {
+                dispatch(addToCart(item, item.quantity + 1, item.varient));
+              }}
+              className="text-success"
+            />
+          </h6>
+        </div>
+        <div className="d-flex align-items-center">
+          <img
+            alt={item.image}
+            src={item.image}
+            style={{
+              width: "150px",
+              height: "150px",
+              borderRadius: "5px",
+              padding: "10px",
+            }}
+          />
+          <FaTrash
+            className="text-danger ml-3"
+            style={{ cursor: "pointer", fontSize: "24px" }}
+            onClick={() => {
+              dispatch(deleteFromCart(item));
+            }}
+          />
+        </div>
+      </div>
+      <hr />
+    </Col>
+  ))}
+</Row>
+            {/* <Row>
               {
                 cartItems.map(item=>(
                   <>
@@ -62,7 +114,7 @@ export const Card = () => {
                   </>
                 ))
               }
-            </Row>
+            </Row> */}
           </Col>
         </Row>
       </Container>

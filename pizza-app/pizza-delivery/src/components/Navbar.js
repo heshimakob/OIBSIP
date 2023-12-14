@@ -6,6 +6,9 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { logoutUser } from "../actions/userAction";
+import { MdLocalGroceryStore } from "react-icons/md";
+import Badge from 'react-bootstrap/Badge';
+import pizza from '../assets/images/pizza.png'
 
 export default function () {
   const dispatch = useDispatch();
@@ -15,14 +18,26 @@ export default function () {
   return (
     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="#home">Pizza-delivery</Navbar.Brand>
+      <Navbar.Brand href="#home" className="d-flex align-items-center">
+  <img
+    src={pizza}
+    alt="Your Logo"
+    style={{ width: '40px', height: '40px', marginRight: '10px' }} // Ajustez la taille et la marge selon vos besoins
+  />
+  <span>Pizza-delivery</span>
+</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/card">Orders {cartState.cartItems.length}</Nav.Link>
+            <Nav.Link href="/card" className="d-flex align-items-center">
+  <MdLocalGroceryStore style={{ fontSize: '20px' }} />
+  <Badge bg="danger" style={{ marginLeft: '5px', fontSize: '14px' }}>
+    {cartState.cartItems.length}
+  </Badge>
+</Nav.Link>
             <Nav.Link href="/order">
-              Store 
+              Orders
             </Nav.Link>
           
             <NavDropdown title="Dropdown" id="collapsible-nav-dropdown">

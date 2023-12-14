@@ -18,13 +18,14 @@ export default function Pizza({ pizza }) {
   const [quantity, setQuantity] = useState(1);
   return (
     <>
-      <Card style={{ width: "18rem", marginTop: "10px" }}>
+    
+      <Card style={{ width: "18rem", marginTop: "10px",borderRadius:"20px" }}>
         <Card.Img variant="top" src={pizza.image} onClick={handleShow} style={{cursor:"pointer"}} />
         <Card.Body>
           <Card.Title>{pizza.name}</Card.Title>
           <Card.Text>
             <Row>
-              <Col md={6}>
+              <Col md={5}>
                 <h6>Varient</h6>
                 <select
                   value={varient}
